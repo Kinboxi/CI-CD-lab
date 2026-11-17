@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: This is a first step
-        run: exit 1
+        run: echo "First step"
 
       - name: This is a second step
         run: echo "Second step"
