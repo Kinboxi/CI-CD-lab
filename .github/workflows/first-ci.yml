@@ -13,4 +13,8 @@ jobs:
     steps:
       - name: This is a first step
         shell: bash
-        run: echo "First step"
+        run: echo "One"
+      - shell: bash
+        run: |
+          echo "Status: ready"
+          echo "Done"
