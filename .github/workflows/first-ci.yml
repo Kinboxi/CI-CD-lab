@@ -4,12 +4,13 @@ on:
   push:
     branches: [main]
 
+permissions: {}
+
 jobs:
   hello:
     runs-on: ubuntu-24.04
+    timeout-minutes: 5
     steps:
       - name: This is a first step
+        shell: bash
         run: echo "First step"
-
-      - name: This is a second step
-        run: echo "Second step"
