@@ -1,0 +1,12 @@
+name: First CI
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  hello:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Say hello
+        run: echo "Hello from CI"
