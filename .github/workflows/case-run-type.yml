@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Prepare
-        run: echo Start
+        run: echo "Start"
       - name: Finish
-        run:
-          - 'echo "Status: ready"'
-          - 'echo "Done"'
+        run: |
+          'echo "Status: ready"'
+          'echo "Done"'
