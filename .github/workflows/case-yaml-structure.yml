@@ -1,0 +1,11 @@
+# Требование: push в main, один job inspect, вывод Ready. Исправь структуру workflow.
+name: Structure case
+on:
+  push:
+    branches: [main]
+permissions: {}
+jobs:
+  inspect:
+    runs-on: ubuntu-24.04
+  steps:
+    - run: echo Ready
