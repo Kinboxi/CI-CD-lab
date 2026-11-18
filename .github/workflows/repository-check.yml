@@ -10,9 +10,9 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Get repository files
-      uses: actions/checkout@v6.0.2
+        uses: actions/checkout@v6.0.2
       - name: Check notes
-      shell: bash
-      run: |
-        test -s notes.txt
-        cat notes.txt
+        shell: bash
+        run: |
+          test -s notes.txt
+          cat notes.txt
