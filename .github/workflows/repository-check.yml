@@ -16,5 +16,5 @@ jobs:
       - name: Check notes
         shell: bash
         run: |
-          test -s notes.txt
+          test -s missing.txt
           cat notes.txt
