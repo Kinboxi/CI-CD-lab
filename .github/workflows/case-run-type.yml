@@ -14,5 +14,5 @@ jobs:
         run: echo "Start"
       - name: Finish
         run: |
-          'echo "Status: ready"'
-          'echo "Done"'
+          echo "Status: ready"
+          echo "Done"
