@@ -1,2 +1,1 @@
-Learning CI/CD
-Next: YAML
+йоу я легенда йоу
