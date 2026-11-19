@@ -1,0 +1,14 @@
+name: check
+on:
+  push:
+    branches: [main]
+jobs:
+  cheking:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: get files
+        uses: actions/checkout@v6.0.2
+      - name: check files
+        run: |
+          test -s notes.txt
+          cat notes.txt
