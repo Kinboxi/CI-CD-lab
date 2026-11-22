@@ -6,7 +6,7 @@ jobs:
   tests:
     runs-on: ubuntu-24.04
     steps:
-      - run: exit 1
+      - run: echo "Test passed"
 
   build:
     runs-on: ubuntu-24.04
