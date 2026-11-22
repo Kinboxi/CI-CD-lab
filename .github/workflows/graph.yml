@@ -26,6 +26,6 @@ jobs:
     steps:
       - name: Show results
         run: |
-          echo "Lint: ${{ needs.lint.result }}"
+          echo "Lints: ${{ needs.lint.result }}"
           echo "Tests: ${{ needs.tests.result }}"  
 
