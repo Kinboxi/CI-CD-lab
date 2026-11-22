@@ -22,7 +22,7 @@ jobs:
   summary:
     runs-on: ubuntu-24.04
     needs: [tests, lints]
-    if: {{ always() }}
+    if: ${{ always() }}
     steps:
       - name: Show results
         run: |
