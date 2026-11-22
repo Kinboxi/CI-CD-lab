@@ -6,15 +6,25 @@ jobs:
   lints:
     runs-on: ubuntu-24.04
     steps:
-      - run: exit 1
+      - run: echo "Passed"
 
   tests:
     runs-on: ubuntu-24.04
     steps:
-      - run: echo "Test passed"
+      - run: exit 1
 
   build:
     runs-on: ubuntu-24.04
     needs: [tests, lints]
     steps:
       - run: echo "Build passed"
+  
+  summary:
+    runs-on: ubuntu-24.04
+    needs: [tests, lints]
+    steps:
+      - name: Show results
+        run: |
+          echo "Lint: ${{ needs.lint.result }}"
+          echo "Tests: ${{ needs.tests.result }}"  
+
