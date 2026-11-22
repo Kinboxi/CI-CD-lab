@@ -6,7 +6,7 @@ jobs:
   lints:
     runs-on: ubuntu-24.04
     steps:
-      - run: echo "Pass"
+      - run: exit 1
 
   tests:
     runs-on: ubuntu-24.04
