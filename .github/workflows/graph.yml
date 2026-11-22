@@ -3,6 +3,11 @@ on:
   workflow_dispatch:
 
 jobs:
+  lints:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: echo "Pass"
+
   tests:
     runs-on: ubuntu-24.04
     steps:
@@ -10,6 +15,6 @@ jobs:
 
   build:
     runs-on: ubuntu-24.04
-    needs: tests
+    needs: [tests, lints]
     steps:
       - run: echo "Build passed"
