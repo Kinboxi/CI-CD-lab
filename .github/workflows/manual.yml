@@ -1,6 +1,11 @@
 name: Manual diagnostic
 on:
   workflow_dispatch:
+
+concurrency:
+  group: diagnostic
+  cancel-in-progress: true
+
 jobs:
   inspect:
     runs-on: ubuntu-24.04
@@ -9,3 +14,4 @@ jobs:
         run: |
           uname -s
           date -u
+        run: sleep 45
