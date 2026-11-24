@@ -1,0 +1,33 @@
+name: Repository checks
+on:
+  push:
+    branches: [main, another/something]
+  pull_request: [main]
+
+jobs:
+  check-readme:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: test -s README.md
+
+  check-notes:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: test -s notes.txt
+  
+  build:
+    runs-on: ubuntu-24.04
+    needs: ["check-notes", "check-readme"]
+    steps:
+      - run: echo "Build allowed"
+
+  report:
+    runs-on: ubuntu-24.04
+    needs: ["check-notes", "check-readme"]
+    if: ${{ !cancelled() }}
+    steps:
+      - run: echo "Notes result-${{ needs.check-notes.result }}"
+      - run: echo "Readme result-${{ needs.check-readme.result }}"
+
